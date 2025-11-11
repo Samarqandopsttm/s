@@ -72,6 +72,32 @@ ul.sports li:before{content:"▸";color:var(--green);position:absolute;left:0;fo
   ul.sports{columns:1}
   .nav{gap:12px;font-size:14px}
 }
+</style> <style>
+/* Sport vazirligi logotipini orqa fonga nozik joylashtirish */
+body {
+  position: relative;
+  background: #f8fcff url('https://i.imgur.com/2jX5e0F.png') center 140px / 420px auto no-repeat fixed;
+}
+
+/* Logotip ustidan oq qatlam – matnlar aniq o‘qilishi uchun */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(248, 252, 255, 0.94); /* juda nozik oq qoplama */
+  z-index: -1;
+}
+
+/* Mobil telefonlarda logotip biroz kichikroq va pastroqda bo‘lsin */
+@media (max-width: 768px) {
+  body {
+    background-size: 300px auto;
+    background-position: center 100px;
+  }
+  body::before {
+    background: rgba(248, 252, 255, 0.96);
+  }
+}
 </style>
 </head>
 <body>
