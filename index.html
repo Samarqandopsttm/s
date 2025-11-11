@@ -3,106 +3,112 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Samarqand — Olimpiya va Paralimpiya markazi</title>
-<meta name="description" content="Samarqand center — training for Olympic & Paralympic sports">
+<title>SamOPSTTM — Olimpiya va Paralimpiya markazi</title>
+<meta name="description" content="Samarqand Olimpiya va Paralimpiya sport turlari tayyorlash markazi">
 <link rel="icon" href="assets/logo.png">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 <style>
-:root{
-  --blue:#0b61b3; --green:#1fa65a; --dark:#072238; --muted:#5d6b77; --white:#fff;
-  --card-bg: #ffffff; --shadow: 0 8px 24px rgba(7,34,56,0.08);
+:root{--blue:#0b61b3;--green:#1fa65a;--dark:#072238;--muted:#5d6b77;--white:#fff;--card-bg:#ffffff;--shadow:0 8px 30px rgba(7,34,56,0.1)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,system-ui,-apple-system,sans-serif;background:#f8fcff;color:var(--dark);line-height:1.8}
+.header{background:linear-gradient(90deg,var(--blue),var(--green));color:white;padding:20px 0;box-shadow:0 4px 20px rgba(0,0,0,0.1)}
+.container{max-width:1160px;margin:0 auto;padding:0 20px}
+.row{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px}
+.brand{display:flex;align-items:center;gap:14px}
+.brand img{width:68px;height:68px;object-fit:contain;border-radius:12px;background:rgba(255,255,255,0.95);padding:8px}
+.nav{display:flex;gap:20px;align-items:center}
+.nav a{color:rgba(255,255,255,0.95);text-decoration:none;font-weight:700;font-size:15px;transition:.3s}
+.nav a:hover{color:white}
+.lang-btn{padding:8px 14px;border-radius:10px;border:1px solid rgba(255,255,255,0.3);background:transparent;color:white;font-weight:800;cursor:pointer;transition:.3s}
+.lang-btn.active{background:rgba(255,255,255,0.25);border-color:white}
+.hero{padding:60px 0;display:flex;gap:40px;align-items:flex-start;flex-wrap:wrap}
+.hero-left{flex:2;min-width:300px;background:linear-gradient(135deg,rgba(255,255,255,0.98),rgba(255,255,255,0.94));border-radius:20px;padding:40px;box-shadow:var(--shadow)}
+.hero-title{font-size:42px;font-weight:900;color:var(--dark);margin-bottom:16px;line-height:1.2}
+.hero-sub{font-size:19px;color:var(--muted);margin-bottom:30px}
+.contact-line{font-size:18px;margin:30px 0;line-height:2.2}
+.contact-item{font-weight:700;color:var(--blue)}
+.mail-btn{display:inline-block;background:var(--blue);color:white;padding:14px 28px;border-radius:14px;font-weight:800;text-decoration:none;margin-top:20px;font-size:18px;transition:.3s}
+.mail-btn:hover{background:#094e8c;transform:translateY(-3px)}
+.card{background:var(--card-bg);padding:32px;border-radius:20px;box-shadow:var(--shadow);margin-bottom:30px}
+h2{font-size:32px;color:var(--blue);margin-bottom:24px;font-weight:800}
+ul.sports{columns:2;gap:40px;list-style:none}
+ul.sports li{position:relative;padding-left:32px;font-size:18px;margin:12px 0}
+ul.sports li:before{content:"▸";color:var(--green);position:absolute;left:0;font-size:22px;font-weight:bold}
+.footer{background:var(--dark);color:white;padding:60px 0;text-align:center}
+.social-buttons{margin:30px 0}
+.social-btn{display:inline-block;margin:0 20px;padding:16px 44px;background:rgba(255,255,255,0.15);color:white;border-radius:50px;font-size:20px;font-weight:600;transition:all .4s;border:1px solid rgba(255,255,255,0.2);backdrop-filter:blur(10px)}
+.social-btn:hover{transform:translateY(-8px);box-shadow:0 20px 40px rgba(0,0,0,0.5)}
+.telegram:hover{background:#0088cc !important}
+.instagram:hover{background:#E4405F !important}
+@media(max-width:900px){
+  .hero{flex-direction:column;padding:40px 0}
+  .hero-title{font-size:34px}
+  ul.sports{columns:1}
+  .nav{gap:12px;font-size:14px}
 }
-*{box-sizing:border-box}
-body{font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial; margin:0; color:var(--dark); background:#f5fbff; -webkit-font-smoothing:antialiased;}
-.header{background:linear-gradient(90deg,var(--blue), #0aa06a); color:var(--white); padding:18px 0; box-shadow:0 4px 20px rgba(7,34,56,0.06);}
-.container{max-width:1100px;margin:0 auto;padding:0 18px}
-.row{display:flex;align-items:center;gap:18px}
-.brand{display:flex;align-items:center;gap:12px}
-.brand img{width:64px;height:64px;object-fit:contain;border-radius:10px;background:rgba(255,255,255,0.95);padding:6px}
-.nav{margin-left:auto;display:flex;gap:14px;align-items:center}
-.nav a{color:rgba(255,255,255,0.95);text-decoration:none;font-weight:700}
-.lang-btn{background:transparent;border:1px solid rgba(255,255,255,0.12);color:var(--white);padding:6px 10px;border-radius:8px;font-weight:800;cursor:pointer}
-.hero{display:flex;gap:24px;align-items:stretch;padding:34px 0}
-.hero-left{flex:1;background:linear-gradient(180deg, rgba(255,255,255,0.95), rgba(255,255,255,0.9)); border-radius:12px;padding:26px;box-shadow:var(--shadow)}
-.hero-title{font-size:34px;margin:0 0 8px;color:var(--dark);font-weight:900;letter-spacing:0.2px}
-.hero-sub{margin:0 0 16px;color:var(--muted);font-weight:600}
-.contact-line{display:flex;flex-direction:column;gap:8px}
-.contact-item{color:var(--dark);font-weight:700}
-.mail-btn{display:inline-block;background:var(--blue);color:var(--white);padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:800}
-.card{background:var(--card-bg);padding:18px;border-radius:12px;box-shadow:var(--shadow);margin-bottom:18px}
-.main{padding:26px 0}
-h2{color:var(--blue);margin-top:0}
-ul.sports{columns:2;list-style:disc;margin-left:18px;padding-left:12px;color:var(--dark)}
-.footer{background:#f0f6fb;padding:18px 0;color:var(--muted);border-top:1px solid #e6f0fb}
-@media(max-width:900px){.hero{flex-direction:column}.nav{display:none}.brand img{width:56px;height:56px}.hero-title{font-size:26px}.ul.sports{columns:1}}
 </style>
 </head>
 <body>
+
 <header class="header">
   <div class="container row">
     <div class="brand">
       <img src="assets/logo.png" alt="logo">
       <div>
-        <div style="font-weight:900;letter-spacing:1px">SAMARQAND</div>
-        <div style="font-size:13px;opacity:0.95">Olimpiya va Paralimpiya sport turlariga tayyorlash markazi</div>
+        <div style="font-weight:900;letter-spacing:1px;font-size:20px">SAMARQAND</div>
+        <div style="font-size:13px;opacity:0.95">Olimpiya va Paralimpiya markazi</div>
       </div>
     </div>
-    <nav class="nav" aria-label="main nav">
-      <a href="#about" data-section>Biz haqimizda</a>
-      <a href="#sports" data-section>Sport turlari</a>
-      <a href="#contact" data-section>Bog'lanish</a>
-      <button id="btn-uz" class="lang-btn">UZ</button>
-      <button id="btn-ru" class="lang-btn">RU</button>
+    <nav class="nav">
+      <a href="#about">Biz haqimizda</a>
+      <a href="#sports">Sport turlari</a>
+      <a href="#contact">Bog‘lanish</a>
+      <button class="lang-btn active" onclick="setLang('uz')">UZ</button>
+      <button class="lang-btn" onclick="setLang('ru')">РУС</button>
+      <button class="lang-btn" onclick="setLang('en')">EN</button>
     </nav>
   </div>
-  </header>
+</header>
 
-<main class="container main">
+<main class="container">
   <section class="hero">
-    <div class="hero-left" id="content-uz">
-      <h1 class="hero-title">Biz chempionlarni tayyorlaymiz!</h1>
-     <section id="about" class="card">
-      <p style="margin-top:12px"><a class="mail-btn" id="mail-uz" href="mailto:samarqandopsttm@gmail.com?subject=Kontakt"
-    </div>
-    <div class="card" id="sidebar-uz" style="min-width:260px;">
-      <h3 style="margin-top:0;color:var(--blue)">Kontakt</h3>
-      <p style="margin:6px 0"><strong>Tel:</strong> <span id="s-tel-uz">+998 55 701 33 05</span></p>
-      <p style="margin:6px 0"><strong>Email:</strong> samarqandopsttm@gmail.com</p>
-      <p style="margin:6px 0"><strong>Manzil:</strong> Пахтаабадская улица, 77А, Самаркand</p>
+    <div class="hero-left">
+      <h1 class="hero-title" data-tr="title">Biz chempionlarni tayyorlaymiz!</h1>
+      <p class="hero-sub" data-tr="desc">Samarqand markazi sportchilarning professional rivojlanishi va xalqaro musobaqalarga tayyorlash bilan shug‘ullanadi.</p>
+      <div class="contact-line">
+        <div><span class="contact-item" data-tr="director">Direktor:</span> Bagirov Olim Hakimovich</div>
+        <div><span class="contact-item" data-tr="phone">Telefon:</span> +998 55 701 33 05</div>
+        <div><span class="contact-item">Email:</span> samarqandopsttm@gmail.com</div>
+        <div><span class="contact-item" data-tr="address">Manzil:</span> Пахтаабадская улица, 77А, Самарканд</div>
+      </div>
+      <a class="mail-btn" data-tr="contact_btn" href="mailto:samarqandopsttm@gmail.com">Biz bilan bog‘lanish</a>
     </div>
   </section>
-  <section id="about" class="card" data-lang="uz">
-    <h2>Biz haqimizda</h2>
-   <section id="about" class="card">
-  <h2 data-tr="about">Biz haqimizda</h2>
-  <div style="background:rgba(11,97,179,0.08); padding:20px; border-radius:16px; border-left:5px solid #0b61b3; margin:25px 0; font-size:17px; line-height:1.9">
-    <p><strong>Oʻzbekiston Respublikasi Vazirlar Mahkamasining</strong><br>
-    <strong>30.12.2022 yildagi 731-sonli qarori</strong> bilan tashkil etilgan</p>
-    
-    <p style="margin:18px 0; padding:15px; background:rgba(255,255,255,0.7); border-radius:12px; font-weight:600">
-      OLIMPIYA VA PARALIMPIYA SPORT TURLARIGA TAYYORLASH MARKAZLARI<br>
-      FAOLIYATINI TASHKIL ETISH CHORA-TADBIRLARI TOʻGʻRISIDA
-    </p>
-    <p>Markaz <strong>Oʻzbekiston Respublikasi Prezidentining 2022-yil 6-iyundagi PQ-268-son qarori</strong> ijrosini taʼminlash maqsadida tashkil etilgan boʻlib, yuqori malakali sportchilar va Oʻzbekiston terma jamoalarini shakllantirish uchun sport zaxirasini tayyorlashga ixtisoslashgan oʻrta va professional davlat sport-taʼlim muassasasidir.</p>
 
-    <div style="margin:25px 0; font-size:16.5px">
-      <strong>Asosiy belgilangan tartiblar:</strong>
-      <ul style="margin:15px 0; padding-left:28px">
-        <li>2022/2023 oʻquv yilida Samarqand olimpiya va paralimpiya markazida <strong>600 nafar</strong> oʻquvchi-sportchi</li>
-        <li>2023/2024 oʻquv yilidan boshlab – <strong>450 nafar</strong> oʻquvchi-sportchi</li>
-        <li>Barcha oʻquvchi-sportchilar <strong>toʻliq Davlat budjeti hisobidan oziq-ovqat bilan taʼminlanadi</strong></li>
-        <li>Paralimpiya boʻlimlari uchun <strong>10% gacha qoʻshimcha kvota</strong> (Oʻzbekiston Milliy paralimpiya qoʻmitasi tavsiyasiga koʻra)</li>
-        <li>Boʻshagan budjet mablagʻlari sportchilarning ovqatlanishini yaxshilash va trenerlarni ragʻbatlantirishga yoʻnaltiriladi</li>
-        <li>Psixolog va tarbiyachilar <strong>bepul malaka oshiradi</strong></li>
+  <section id="about" class="card">
+    <h2 data-tr="about">Biz haqimizda</h2>
+    <div style="background:rgba(11,97,179,0.08);padding:28px;border-radius:16px;border-left:6px solid var(--blue);font-size:17.5px;line-height:2">
+      <p style="font-weight:600;margin-bottom:20px">
+        Oʻzbekiston Respublikasi Vazirlar Mahkamasining <strong>30.12.2022 yildagi 731-son qarori</strong> bilan tashkil etilgan
+      </p>
+      <p style="padding:18px;background:white;border-radius:12px;font-weight:700;font-size:18px;text-align:center;margin:20px 0">
+        OLIMPIYA VA PARALIMPIYA SPORT TURLARIGA TAYYORLASH MARKAZLARI<br>FAOLIYATINI TASHKIL ETISH CHORA-TADBIRLARI
+      </p>
+      <p>Markaz Prezidentning 2022-yil 6-iyundagi PQ-268-son qarori ijrosini taʼminlash maqsadida tashkil etilgan boʻlib, yuqori malakali sport zaxirasini tayyorlashga yoʻnaltirilgan davlat sport-taʼlim muassasasidir.</p>
+      <ul style="margin:20px 0;padding-left:30px">
+        <li>2023/24 oʻquv yilidan – <strong>450 nafar</strong> oʻquvchi-sportchi</li>
+        <li>Barcha sportchilar <strong>toʻliq davlat hisobidan oziq-ovqat bilan taʼminlanadi</strong></li>
+        <li>Paralimpiya boʻlimlari uchun <strong>10% gacha qoʻshimcha kvota</strong></li>
+        <li>Trener va psixologlar <strong>bepul malaka oshiradi</strong></li>
       </ul>
+      <p style="text-align:center;background:linear-gradient(90deg,var(--blue),var(--green));color:white;padding:20px;border-radius:16px;font-size:19px;font-weight:700;margin-top:30px">
+        Biz – Oʻzbekistonning kelajak chempionlarini tayyorlaydigan eng zamonaviy markaz!
+      </p>
     </div>
+  </section>
 
-    <p style="text-align:center; margin-top:30px; padding:18px; background:linear-gradient(90deg,#0b61b3,#0aa06a); color:white; border-radius:16px; font-size:18px; font-weight:600">
-      Biz – Oʻzbekistonning kelajak chempionlarini tayyorlaydigan eng zamonaviy va professional markazlardan birimiz!
-    </p>
-  </div>
-</section>
-  <section id="sports" class="card" data-lang="uz">
-    <h2>Sport turlari</h2>
+  <section id="sports" class="card">
+    <h2 data-tr="sports">Sport turlari</h2>
     <ul class="sports">
       <li>Boks</li>
       <li>Og‘ir atletika</li>
@@ -120,100 +126,63 @@ ul.sports{columns:2;list-style:disc;margin-left:18px;padding-left:12px;color:var
     </ul>
   </section>
 
-  <!-- Russian content (hidden by default) -->
-  <section class="hero-left card" id="content-ru" style="display:none">
-    <h1 class="hero-title">Мы готовим чемпионов!</h1>
-    <p class="hero-sub">Самаркандский центр занимается профессиональной подготовкой спортсменов и их участием в международных соревнованиях.</p>
-    <div class="contact-line">
-      <div><span class="contact-item">Директор:</span> <span id="dir-ru">Багиров Олим Хакимович</span></div>
-      <div><span class="contact-item">Телефон:</span> <span id="tel-ru">+998 55 701 33 05</span></div>
-      <div><span class="contact-item">Email:</span> <a href="mailto:samarqandopsttm@gmail.com">samarqandopsttm@gmail.com</a></div>
-      <div><span class="contact-item">Адрес:</span> <span>ул. Пахтаабадская, 77А, Самарканд</span></div>
-    </div>
-    <p style="margin-top:12px"><a class="mail-btn" id="mail-ru" href="mailto:samarqandopsttm@gmail.com?subject=Запрос">Написать нам</a></p>
-  </section>
-
-  <section class="card" data-lang="ru" style="display:none">
-    <h2>О центре</h2>
-    <p>Центр расположен в Самарканде и специализируется на подготовке юных и профессиональных спортсменов. У нас современная инфраструктура и интегрированные программы подготовки.</p>
-  </section>
-
-  <section class="card" data-lang="ru" style="display:none">
-    <h2>Виды спорта</h2>
-    <ul class="sports">
-      <li>Бокс</li>
-      <li>Тяжёлая атлетика</li>
-      <li>Спортивная гимнастика</li>
-      <li>Художественная гимнастика</li>
-      <li>Вольная борьба и женская борьба</li>
-      <li>Греко-римская борьба</li>
-      <li>Фехтование</li>
-      <li>Баскетбол</li>
-      <li>Лёгкая атлетика</li>
-      <li>Самбо</li>
-      <li>Кураш</li>
-      <li>Паралёгкая атлетика</li>
-      <li>Гандбол</li>
-    </ul>
-  </section>
-
-  <section class="card" data-lang="ru" style="display:none">
-    <h2>Контакты</h2>
-    <p><strong>Директор:</strong> Багиров Олим Хакимович</p>
-    <p><strong>Телефон:</strong> +998 55 701 33 05</p>
+  <section id="contact" class="card">
+    <h2 data-tr="contact">Bog‘lanish</h2>
+    <p><strong data-tr="director">Direktor:</strong> Bagirov Olim Hakimovich</p>
+    <p><strong data-tr="phone">Telefon:</strong> <a href="tel:+998557013305">+998 55 701 33 05</a></p>
     <p><strong>Email:</strong> <a href="mailto:samarqandopsttm@gmail.com">samarqandopsttm@gmail.com</a></p>
-    <p><strong>Адрес:</strong> ул. Пахтаабадская, 77А, Самарканд</p>
+    <p><strong data-tr="address">Manzil:</strong> Пахтаабадская улица, 77А, Самарканд</p>
   </section>
-
 </main>
 
 <footer class="footer">
   <div class="container">
-    <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
-      <div style="font-weight:800">© 2025 Samarqand Sport</div>
-      <div style="color:var(--muted)">Пахтаабадская улица, 77А — Tel: +998 55 701 33 05 — Email: samarqandopsttm@gmail.com</div>
+    <div class="social-buttons">
+      <a href="https://t.me/SamOZKAXBOROTXIZMAT" target="_blank" class="social-btn telegram">Telegram</a>
+      <a href="https://www.instagram.com/Sopsttm" target="_blank" class="social-btn instagram">Instagram</a>
     </div>
+    <p data-tr="footer" style="font-size:16px;opacity:0.9">
+      © 2025 Samarqand Olimpiya va Paralimpiya sport turlariga tayyorlash markazi<br>
+      Пахтаабадская улица, 77А • Tel: +998 55 701 33 05 • Email: samarqandopsttm@gmail.com
+    </p>
   </div>
 </footer>
 
 <script>
-// language toggle logic: shows/hides elements with data-lang attributes and specific hero blocks
-const btnUz = document.getElementById('btn-uz');
-const btnRu = document.getElementById('btn-ru');
-function showLang(lang){
-  // show/hide content sections
-  document.querySelectorAll('[data-lang="uz"]').forEach(el=> el.style.display = (lang==='uz')? 'block':'none');
-  document.querySelectorAll('[data-lang="ru"]').forEach(el=> el.style.display = (lang==='ru')? 'block':'none');
-  // hero blocks
-  document.getElementById('content-uz').style.display = (lang==='uz')? 'block':'none';
-  document.getElementById('sidebar-uz').style.display = (lang==='uz')? 'block':'none';
-  document.getElementById('content-ru').style.display = (lang==='ru')? 'block':'none';
-  // update nav anchor labels for small screens as well
-  localStorage.setItem('site_lang', lang);
-}
-btnUz.addEventListener('click', ()=> showLang('uz'));
-btnRu.addEventListener('click', ()=> showLang('ru'));
-// initialize
-const saved = localStorage.getItem('site_lang') || 'uz';
-showLang(saved);
-</script>
-  <!-- Ijtimoiy tarmoq tugmalari - yangi qo'shilgan -->
-  <div style="background: #001f3f; padding: 30px 20px; text-align: center; margin-top: -10px;">
-    <a href="https://t.me/SamOZKAXBOROTXIZMAT" target="_blank" class="social-btn telegram" style="display: inline-block; margin: 0 20px; padding: 14px 32px; background: rgba(255,255,255,0.15); color: white; text-decoration: none; border-radius: 50px; font-size: 20px; font-weight: 600; transition: all 0.4s; backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2);">
-      <i class="fab fa-telegram-plane"></i> Telegram
-    </a>
-    <a href="https://www.instagram.com/Sopsttm" target="_blank" class="social-btn instagram" style="display: inline-block; margin: 0 20px; padding: 14px 32px; background: rgba(255,255,255,0.15); color: white; text-decoration: none; border-radius: 50px; font-size: 20px; font-weight: 600; transition: all 0.4s; backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2);">
-      <i class="fab fa-instagram"></i> Instagram
-    </a>
-  </div>
+const translations = {
+  uz: {
+    title:"Biz chempionlarni tayyorlaymiz!", desc:"Samarqand markazi sportchilarning professional rivojlanishi va xalqaro musobaqalarga tayyorlash bilan shug‘ullanadi.",
+    director:"Direktor:", phone:"Telefon:", address:"Manzil:", contact_btn:"Biz bilan bog‘lanish",
+    about:"Biz haqimizda", sports:"Sport turlari", contact:"Bog‘lanish",
+    footer:"© 2025 Samarqand Olimpiya va Paralimpiya sport turlariga tayyorlash markazi<br>Пахтаабадская улица, 77А • Tel: +998 55 701 33 05 • Email: samarqandopsttm@gmail.com"
+  },
+  ru: {
+    title:"Мы готовим чемпионов!", desc:"Самаркандский центр занимается профессиональной подготовкой спортсменов к международным соревнованиям.",
+    director:"Директор:", phone:"Телефон:", address:"Адрес:", contact_btn:"Написать нам",
+    about:"О центре", sports:"Виды спорта", contact:"Контакты",
+    footer:"© 2025 Самаркандский центр подготовки по олимпийским и паралимпийским видам спорта<br>ул. Пахтаабадская, 77А • Тел: +998 55 701 33 05 • Email: samarqandopsttm@gmail.com"
+  },
+  en: {
+    title:"We train champions!", desc:"Samarkand Center specializes in professional athlete development and preparation for international competitions.",
+    director:"Director:", phone:"Phone:", address:"Address:", contact_btn:"Contact us",
+    about:"About Us", sports:"Sports", contact:"Contact",
+    footer:"© 2025 Samarkand Olympic & Paralympic Sports Training Center<br>Pakhtaabadskaya street, 77A • Tel: +998 55 701 33 05 • Email: samarqandopsttm@gmail.com"
+  }
+};
 
-  <style>
-    .social-btn:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 15px 35px rgba(0,0,0,0.5);
-    }
-    .telegram:hover { background: #0088cc !important; }
-    .instagram:hover { background: #E4405F !important; }
-  </style>
+function setLang(lang) {
+  document.querySelectorAll('[data-tr]').forEach(el => {
+    const key = el.getAttribute('data-tr');
+    if (translations[lang][key]) el.innerHTML = translations[lang][key];
+  });
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.getAttribute('onclick').includes(lang));
+  });
+  localStorage.setItem('site_lang', lang);
+  document.documentElement.lang = lang;
+}
+
+window.onload = () => setLang(localStorage.getItem('site_lang') || 'uz');
+</script>
 </body>
 </html>
