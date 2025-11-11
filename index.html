@@ -7,7 +7,31 @@
 <meta name="description" content="Samarqand Olimpiya va Paralimpiya sport turlari tayyorlash markazi">
 <link rel="icon" href="assets/logo.png">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-<style>
+<style> /* Sport vazirligi logotipini orqa fonga nozik joylashtirish */
+body {
+  position: relative;
+  background: #f8fcff url('https://i.imgur.com/2jX5e0F.png') center 140px / 420px auto no-repeat fixed;
+}
+
+/* Logotip ustidan oq qatlam – matnlar aniq o‘qilishi uchun */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(248, 252, 255, 0.94); /* juda nozik oq qoplama */
+  z-index: -1;
+}
+
+/* Mobil telefonlarda logotip biroz kichikroq va pastroqda bo‘lsin */
+@media (max-width: 768px) {
+  body {
+    background-size: 300px auto;
+    background-position: center 100px;
+  }
+  body::before {
+    background: rgba(248, 252, 255, 0.96);
+  }
+}
 :root{--blue:#0b61b3;--green:#1fa65a;--dark:#072238;--muted:#5d6b77;--white:#fff;--card-bg:#ffffff;--shadow:0 8px 30px rgba(7,34,56,0.1)}
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:Inter,system-ui,-apple-system,sans-serif;background:#f8fcff;color:var(--dark);line-height:1.8}
