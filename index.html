@@ -18,149 +18,82 @@ body{
   color:var(--dark);
   line-height:1.8;
   min-height:100vh;
-  /* Sport vazirligi logotipi – katta va tiniq */
+  position:relative;
+  /* YANGI – Sport vazirligi logotipi orqa fonda – juda zo‘r chiqdi! */
   background-image:url('https://i.imgur.com/2jX5e0F.png');
   background-repeat:no-repeat;
-  background-position:center 130px;
+  background-position:center 140px;
   background-attachment:fixed;
-  background-size:460px auto;
+  background-size:500px auto;
+  opacity:1;
 }
 body::before{
   content:"";
   position:fixed;
   top:0;left:0;right:0;bottom:0;
-  background:rgba(248,252,255,0.955);
+  background:rgba(248,252,255,0.965);
   z-index:-1;
 }
 .header{
   background:linear-gradient(90deg,var(--blue),var(--green));
   color:white;
-  padding:22px 0;
-  box-shadow:0 4px 25px rgba(0,0,0,0.12);
+  padding:24px 0;
+  box-shadow:0 6px 30px rgba(0,0,0,0.15);
 }
-.container{max-width:1180px;margin:0 auto;padding:0 20px}
+.container{max-width:1200px;margin:0 auto;padding:0 20px}
 .row{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px}
 .brand{display:flex;align-items:center;gap:16px}
-.brand img{width:72px;height:72px;object-fit:contain;border-radius:14px;background:rgba(255,255,255,0.95);padding:8px}
-.brand div{font-size:21px;font-weight:900;letter-spacing:1px}
-.brand div + div{font-size:13.5px;opacity:0.94;font-weight:500}
-.nav{display:flex;gap:24px;align-items:center}
-.nav a{color:rgba(255,255,255,0.95);text-decoration:none;font-weight:700;font-size:15.5px;transition:.3s}
+.brand img{width:74px;height:74px;object-fit:contain;border-radius:14px;background:rgba(255,255,255,0.95);padding:9px}
+.brand div{font-size:22px;font-weight:900;letter-spacing:1.2px}
+.brand div + div{font-size:14px;opacity:0.94}
+.nav{display:flex;gap:26px;align-items:center}
+.nav a{color:rgba(255,255,255,0.95);text-decoration:none;font-weight:700;font-size:16px;transition:.3s}
 .nav a:hover{color:white}
 .lang-btn{
-  padding:9px 16px;
+  padding:10px 18px;
   border-radius:12px;
-  border:1.5px solid rgba(255,255,255,0.35);
+  border:2px solid rgba(255,255,255,0.4);
   background:transparent;
   color:white;
   font-weight:800;
   cursor:pointer;
   transition:.3s;
 }
-.lang-btn.active{background:rgba(255,255,255,0.25);border-color:white}
-.hero{padding:80px 0 60px}
+.lang-btn.active{background:rgba(255,255,255,0.3);border-color:white}
+.hero{padding:90px 0 70px;text-align:center}
 .hero-left{
-  background:linear-gradient(135deg,rgba(255,255,255,0.98),rgba(255,255,255,0.94));
-  border-radius:24px;
-  padding:48px 42px;
-  box-shadow:0 15px 40px rgba(7,34,56,0.12);
-  max-width:800px;
+  background:linear-gradient(135deg,rgba(255,255,255,0.99),rgba(255,255,255,0.95));
+  border-radius:28px;
+  padding:55px 50px;
+  box-shadow:0 20px 50px rgba(7,34,56,0.15);
+  max-width:860px;
   margin:0 auto;
-  text-align:center;
 }
-.hero-title{
-  font-size:46px;
-  font-weight:900;
-  color:var(--dark);
-  margin-bottom:18px;
-  line-height:1.2;
-}
-.hero-sub{
-  font-size:20px;
-  color:#444;
-  margin-bottom:40px;
-  max-width:680px;
-  margin-left:auto;
-  margin-right:auto;
-}
-.contact-line{
-  font-size:19px;
-  margin:40px 0;
-  line-height:2.4;
-  text-align:left;
-  display:inline-block;
-}
+.hero-title{font-size:48px;font-weight:900;color:var(--dark);margin-bottom:20px;line-height:1.2}
+.hero-sub{font-size:21px;color:#333;margin-bottom:45px}
+.contact-line{font-size:20px;line-height:2.5;margin:40px 0}
 .contact-item{font-weight:700;color:var(--blue)}
-.card{
-  background:white;
-  padding:38px;
-  border-radius:24px;
-  box-shadow:0 12px 35px rgba(7,34,56,0.1);
-  margin-bottom:32px;
-}
-h2{
-  font-size:34px;
-  color:var(--blue);
-  margin-bottom:28px;
-  font-weight:800;
-  text-align:center;
-}
-ul.sports{
-  columns:2;
-  gap:50px;
-  list-style:none;
-  max-width:900px;
-  margin:0 auto;
-}
-ul.sports li{
-  position:relative;
-  padding-left:38px;
-  font-size:19px;
-  margin:16px 0;
-  font-weight:500;
-}
-ul.sports li:before{
-  content:"▸";
-  color:var(--green);
-  position:absolute;
-  left:0;
-  font-size:26px;
-  font-weight:bold;
-}
-.footer{
-  background:var(--dark);
-  color:white;
-  padding:70px 20px 50px;
-  text-align:center;
-}
-.social-buttons{margin:35px 0}
+.card{background:white;padding:42px;border-radius:26px;box-shadow:0 15px 40px rgba(7,34,56,0.12);margin-bottom:35px}
+h2{font-size:36px;color:var(--blue);margin-bottom:30px;font-weight:800;text-align:center}
+ul.sports{columns:2;gap:60px;list-style:none;max-width:960px;margin:0 auto}
+ul.sports li{position:relative;padding-left:40px;font-size:19.5px;margin:18px 0;font-weight:500}
+ul.sports li:before{content:"▸";color:var(--green);position:absolute;left:0;font-size:28px;font-weight:bold}
+.footer{background:var(--dark);color:white;padding:80px 20px 60px;text-align:center}
+.social-buttons{margin:40px 0}
 .social-btn{
-  display:inline-block;
-  margin:0 22px;
-  padding:18px 48px;
-  background:rgba(255,255,255,0.15);
-  color:white;
-  border-radius:60px;
-  font-size:21px;
-  font-weight:600;
-  text-decoration:none;
-  transition:all .4s;
-  border:1px solid rgba(255,255,255,0.2);
-  backdrop-filter:blur(12px);
+  display:inline-block;margin:0 25px;padding:20px 52px;background:rgba(255,255,255,0.15);
+  color:white;border-radius:60px;font-size:22px;font-weight:600;text-decoration:none;
+  transition:all .4s;border:1px solid rgba(255,255,255,0.2);backdrop-filter:blur(12px);
 }
-.social-btn:hover{
-  transform:translateY(-10px);
-  box-shadow:0 25px 50px rgba(0,0,0,0.5);
-}
+.social-btn:hover{transform:translateY(-12px);box-shadow:0 30px 60px rgba(0,0,0,0.6)}
 .telegram:hover{background:#0088cc !important}
 .instagram:hover{background:#E4405F !important}
 @media(max-width:768px){
-  body{background-size:320px auto;background-position:center 100px}
-  .hero-title{font-size:36px}
-  .hero-sub{font-size:18px}
+  body{background-size:340px auto;background-position:center 110px}
+  .hero-title{font-size:38px}
+  .hero-sub{font-size:19px}
   ul.sports{columns:1}
-  .nav{gap:14px;font-size:14.5px}
-  .social-btn{padding:16px 36px;font-size:20px;margin:10px}
+  .nav{gap:12px;font-size:15px}
 }
 </style>
 </head>
@@ -202,22 +135,22 @@ ul.sports li:before{
 
   <section id="about" class="card">
     <h2 data-tr="about">Biz haqimizda</h2>
-    <div style="background:rgba(11,97,179,0.07);padding:32px;border-radius:20px;border-left:7px solid var(--blue);font-size:18px;line-height:2.1">
-      <p style="font-weight:700;margin-bottom:22px;text-align:center;font-size:19px">
+    <div style="background:rgba(11,97,179,0.08);padding:35px;border-radius:22px;border-left:8px solid var(--blue);font-size:18.5px;line-height:2.1">
+      <p style="text-align:center;font-weight:700;font-size:20px;margin-bottom:25px">
         Oʻzbekiston Respublikasi Vazirlar Mahkamasining <strong>30.12.2022 yildagi 731-son qarori</strong> bilan tashkil etilgan
       </p>
-      <p style="text-align:center;background:white;padding:20px;border-radius:16px;font-weight:800;font-size:19px;margin:25px 0">
+      <p style="text-align:center;background:white;padding:22px;border-radius:18px;font-weight:800;font-size:20px;margin:28px 0">
         OLIMPIYA VA PARALIMPIYA SPORT TURLARIGA TAYYORLASH MARKAZI
       </p>
-      <p>Markaz Prezidentning 2022-yil 6-iyundagi PQ-268-son qarori ijrosini taʼminlash maqsadida tashkil etilgan boʻlib, Oʻzbekiston terma jamoalari uchun yuqori malakali sport zaxirasini tayyorlashga ixtisoslashgan.</p>
-      <ul style="margin:25px 0;padding-left:35px">
-        <li>2023/24 oʻquv yilidan – <strong>450 nafar</strong> oʻquvchi-sportchi</li>
-        <li>Barcha sportchilar <strong>toʻliq davlat hisobidan oziq-ovqat bilan taʼminlanadi</strong></li>
-        <li>Paralimpiya boʻlimlari uchun <strong>10% gacha qoʻshimcha kvota</strong></li>
-        <li>Trener va psixologlar bepul malaka oshiradi</li>
+      <p>Markaz Prezidentning PQ-268-son qarori ijrosida yuqori malakali sport zaxirasini tayyorlashga mo‘ljallangan.</p>
+      <ul style="margin:30px 0;padding-left:40px">
+        <li>450 nafar oʻquvchi-sportchi (2023/24 yildan)</li>
+        <li>Toʻliq davlat hisobidan ovqatlanish</li>
+        <li>Paralimpiya kvotasi – 10% gacha</li>
+        <li>Trenerlar bepul malaka oshiradi</li>
       </ul>
-      <p style="text-align:center;background:linear-gradient(90deg,var(--blue),var(--green));color:white;padding:22px;border-radius:18px;font-size:20px;font-weight:700;margin-top:35px">
-        Biz – Oʻzbekistonning kelajak chempionlari uyi!
+      <p style="text-align:center;background:linear-gradient(90deg,var(--blue),var(--green));color:white;padding:25px;border-radius:20px;font-size:21px;font-weight:700;margin-top:40px">
+        Biz – kelajak chempionlarining uyi!
       </p>
     </div>
   </section>
@@ -225,25 +158,16 @@ ul.sports li:before{
   <section id="sports" class="card">
     <h2 data-tr="sports">Sport turlari</h2>
     <ul class="sports">
-      <li>Boks</li>
-      <li>Og‘ir atletika</li>
-      <li>Sport gimnastikasi</li>
-      <li>Badiiy gimnastika</li>
-      <li>Erkin kurash va ayollar kurashi</li>
-      <li>Yunon-rum kurashi</li>
-      <li>Qilichbozlik</li>
-      <li>Basketbol</li>
-      <li>Yengil atletika</li>
-      <li>Sambo</li>
-      <li>Kurash</li>
-      <li>Para yengil atletika</li>
-      <li>Gandbol</li>
+      <li>Boks</li><li>Og‘ir atletika</li><li>Sport gimnastikasi</li><li>Badiiy gimnastika</li>
+      <li>Erkin kurash va ayollar kurashi</li><li>Yunon-rum kurashi</li><li>Qilichbozlik</li>
+      <li>Basketbol</li><li>Yengil atletika</li><li>Sambo</li><li>Kurash</li>
+      <li>Para yengil atletika</li><li>Gandbol</li>
     </ul>
   </section>
 
   <section id="contact" class="card">
     <h2 data-tr="contact">Bog‘lanish</h2>
-    <p style="font-size:19px;line-height:2.2;text-align:center">
+    <p style="font-size:20px;line-height:2.4;text-align:center">
       <strong data-tr="director">Direktor:</strong> Bagirov Olim Hakimovich<br>
       <strong data-tr="phone">Telefon:</strong> <a href="tel:+998557013305">+998 55 701 33 05</a><br>
       <strong>Email:</strong> <a href="mailto:samarqandopsttm@gmail.com">samarqandopsttm@gmail.com</a><br>
@@ -258,7 +182,7 @@ ul.sports li:before{
       <a href="https://t.me/SamOZKAXBOROTXIZMAT" target="_blank" class="social-btn telegram">Telegram</a>
       <a href="https://www.instagram.com/Sopsttm" target="_blank" class="social-btn instagram">Instagram</a>
     </div>
-    <p data-tr="footer" style="font-size:16.5px;opacity:0.9">
+    <p data-tr="footer" style="font-size:17px;opacity:0.9">
       © 2025 Samarqand Olimpiya va Paralimpiya sport turlariga tayyorlash markazi<br>
       Пахтаабадская улица, 77А • Tel: +998 55 701 33 05 • Email: samarqandopsttm@gmail.com
     </p>
